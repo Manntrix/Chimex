@@ -1,0 +1,27 @@
+.root {
+  @apply grid md:grid-cols-12 gap-12;
+}
+
+.about {
+  @apply md:col-span-4;
+}
+
+.heading {
+  @apply text-base leading-6 font-bold mb-3 text-white;
+}
+
+.text {
+  @apply text-sm mb-5 text-white text-opacity-60;
+}
+
+.menus {
+  @apply md:col-span-8 grid md:grid-cols-3 gap-2 border-b md:border-b-0 md:border-r border-white border-opacity-20;
+}
+
+.menu {
+  @apply text-white mb-8;
+}
+
+.link {
+  @apply block text-sm leading-10 text-white text-opacity-60 hover:text-opacity-100;
+}

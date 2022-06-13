@@ -1,0 +1,25 @@
+.image {
+  @apply flex items-center justify-center;
+
+  & img {
+    @apply block;
+  }
+
+  & .cover {
+    @apply object-cover;
+  }
+
+  & .contain {
+    @apply object-contain;
+  }
+}
+
+.overlay {
+  @apply absolute top-0 left-0 w-full h-full bg-blue-deep bg-opacity-30;
+}
+
+.overlay_dark {
+  background: linear-gradient(90deg, #0a1e42 48.58%, #2b87c8 100%);
+
+  @apply absolute top-0 left-0 w-full h-full opacity-80;
+}

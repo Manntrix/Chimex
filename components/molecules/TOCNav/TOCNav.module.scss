@@ -1,0 +1,15 @@
+.root {
+  @apply w-72 border-l-2 sticky top-24;
+
+  & ul {
+    @apply list-none p-0 m-0;
+
+    & li {
+      @apply my-1 pl-4 text-left;
+
+      &.active {
+        @apply border-l-4 border-blue-700;
+      }
+    }
+  }
+}

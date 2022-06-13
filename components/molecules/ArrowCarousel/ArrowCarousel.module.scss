@@ -1,0 +1,36 @@
+.container {
+  @apply flex items-center justify-center gap-4 list-none;
+
+  .item {
+    @apply flex justify-center items-center w-1 h-1 text-gray-400 rounded-full font-bold;
+    font-size: 7px;
+
+    &.dots:hover {
+      @apply cursor-default;
+    }
+
+    &:hover {
+      @apply bg-pink-100 cursor-pointer;
+    }
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+
+    &.selected {
+      @apply text-black bg-pink-100;
+    }
+  }
+
+  .arrow {
+    @apply flex justify-center items-center text-gray-500 box-border font-bold;
+
+    &:hover {
+      @apply text-black cursor-pointer;
+    }
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+  }
+}

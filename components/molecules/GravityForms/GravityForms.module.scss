@@ -1,0 +1,19 @@
+.label {
+  @apply block text-blue-deep font-bold mb-1;
+}
+
+.description {
+  @apply text-sm mt-1;
+}
+
+.input {
+  @apply border-gray-400 rounded w-full;
+}
+
+.required {
+  @apply text-red-700 font-bold mr-0.5;
+}
+
+.submit {
+  @apply text-white bg-gradient-to-r from-blue-turquoise to-blue-sky px-8 py-2 capitalize cursor-pointer text-center border-0;
+}

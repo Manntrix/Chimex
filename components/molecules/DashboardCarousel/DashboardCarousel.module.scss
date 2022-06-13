@@ -1,0 +1,32 @@
+.container {
+  @apply flex items-center justify-center gap-4 list-none;
+
+  .item {
+    @apply flex justify-center items-center w-2 h-2 text-gray-400 rounded-full font-bold;
+    font-size: 10px;
+
+    &.dots:hover {
+      @apply cursor-default;
+    }
+
+    &:hover {
+      @apply bg-pink-100 cursor-pointer;
+    }
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+
+    &.selected {
+      @apply text-blue-deep bg-pink-100;
+    }
+  }
+
+  .arrow {
+    @apply flex justify-center items-center gap-2 cursor-pointer text-sm font-bold text-gray-600 mx-4;
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+  }
+}

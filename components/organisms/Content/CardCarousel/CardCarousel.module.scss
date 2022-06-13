@@ -1,0 +1,19 @@
+.carouselCard {
+  @apply flex-shrink-0;
+
+  width: calc(25% - 24px);
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.carouselCardEvent {
+  @apply flex-shrink-0;
+
+  width: calc(33.33% - 24px);
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}

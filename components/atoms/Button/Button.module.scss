@@ -1,0 +1,45 @@
+.button {
+  @apply inline-flex items-center justify-center cursor-pointer font-semibold;
+
+  .text {
+    @apply w-full;
+  }
+
+  /* SIZES */
+  &.lg {
+    @apply px-16 py-4;
+  }
+
+  &.md {
+    @apply px-6 py-3;
+  }
+
+  &.sm {
+    @apply px-4 py-1;
+  }
+
+  /* TYPES */
+  &.primary {
+    @apply text-white bg-gradient-to-r from-blue-turquoise to-blue-sky;
+  }
+
+  &.secondary {
+    @apply text-white bg-gradient-to-r from-green-bright to-green-tea;
+  }
+
+  &.tertiary {
+    @apply text-blue-900 hover:text-white bg-white hover:bg-blue-400;
+  }
+
+  &.white {
+    @apply text-blue-turquoise text-sm border border-blue-turquoise bg-white;
+  }
+
+  &.disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}
+
+.icon {
+  @apply ml-3;
+}

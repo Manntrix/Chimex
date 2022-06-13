@@ -1,0 +1,27 @@
+.container {
+  @apply flex items-center justify-start gap-2 list-none;
+
+  .item {
+    @apply flex justify-center items-center w-6 h-6 text-sm rounded-full font-bold;
+
+    &.dots:hover {
+      @apply cursor-default;
+    }
+
+    &:hover {
+      @apply text-white bg-blue-sky cursor-pointer;
+    }
+
+    .arrow {
+      @apply bg-blue-sky;
+    }
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+
+    &.selected {
+      @apply text-white bg-blue-sky;
+    }
+  }
+}

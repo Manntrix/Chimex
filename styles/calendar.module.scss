@@ -1,0 +1,11 @@
+.dateWrap {
+  min-height: 50px;
+
+  @media (min-width: 768px) {
+    min-height: 160px;
+  }
+}
+
+.date {
+  @apply text-sm md:text-2xl text-center md:text-left font-bold p-3 pb-1;
+}

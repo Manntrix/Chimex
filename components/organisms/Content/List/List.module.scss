@@ -1,0 +1,15 @@
+.items {
+  @apply mb-6;
+}
+
+.item {
+  @apply relative pl-4 mb-1;
+
+  &::before {
+    content: '\2022';
+    font-size: 24px;
+    line-height: 0.85;
+
+    @apply text-green-tea absolute left-0 top-0;
+  }
+}

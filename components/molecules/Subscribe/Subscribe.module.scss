@@ -1,0 +1,11 @@
+.subscribe {
+  @apply flex flex-row flex-wrap lg:flex-nowrap relative items-center;
+
+  .input {
+    @apply pr-8 border-none outline-none ring-0 bg-white bg-opacity-10 text-white w-full lg:w-64;
+  }
+
+  .submit {
+    @apply text-white border-none bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-2 cursor-pointer lg:text-lg w-full lg:w-36;
+  }
+}

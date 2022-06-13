@@ -1,0 +1,65 @@
+.root {
+  @apply relative;
+
+  h1 {
+    @apply text-7xl font-bold;
+  }
+
+  h2 {
+    @apply text-5xl font-bold mt-8 mb-4;
+  }
+
+  h3 {
+    @apply text-3xl font-bold mt-8 mb-4;
+  }
+
+  h4 {
+    @apply text-xl font-bold mt-8 mb-4;
+  }
+
+  h5 {
+    @apply font-bold mt-8 mb-4;
+  }
+
+  h6 {
+    @apply text-sm font-bold mt-8 mb-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  a {
+    @apply font-bold hover:underline text-blue-turquoise;
+
+    // &::after {
+    //   content: url('/icons/arrow-right-blue.svg');
+
+    //   @apply ml-2;
+    // }
+  }
+
+  ul {
+    @apply list-disc list-outside pl-6 mb-4;
+
+    li {
+      @apply marker:text-green-tea mb-2;
+    }
+  }
+
+  hr {
+    @apply my-6;
+  }
+
+  blockquote {
+    @apply border-l-8 border-green-bright pl-6 font-bold;
+  }
+
+  table {
+    @apply table-auto w-full mb-6;
+
+    td {
+      @apply px-2 py-3;
+    }
+  }
+}

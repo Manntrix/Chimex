@@ -1,0 +1,35 @@
+.container {
+  @apply flex items-center justify-between w-full gap-2 list-none border-t;
+
+  .item {
+    @apply flex justify-center items-center p-4 text-sm text-gray-500 font-semibold;
+
+    &.dots:hover {
+      @apply cursor-default;
+    }
+
+    &:hover {
+      @apply text-blue-sky cursor-pointer;
+    }
+
+    .arrow {
+      @apply bg-blue-sky;
+    }
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+
+    &.selected {
+      @apply text-blue-sky border-t-2 border-blue-sky;
+    }
+  }
+
+  .arrow {
+    @apply flex justify-center items-center gap-3 cursor-pointer text-sm font-bold text-gray-600;
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+  }
+}
