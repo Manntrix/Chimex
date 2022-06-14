@@ -7,8 +7,9 @@ import unEntry from '@/functions/unEntry'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import Content from '@/components/organisms/Content'
+import parse from 'html-react-parser'
 
-export default function Page({ page, parentPage }) {
+export default function Page({ page, parentPage, vc }) {
   const router = useRouter()
   if (router.isFallback) {
     return (
@@ -52,15 +53,22 @@ export default function Page({ page, parentPage }) {
       />
 
       <Layout>
-        <PageHero
-          breadcrumbs={breadcrumbs}
-          title={page?.title?.rendered}
-          background_image={page?.acf?.hero_image}
-        />
-
-        <Section className='py-12'>
-          {page?.acf?.elements && <Content elements={page?.acf?.elements} />}
-        </Section>
+        {vc ? (
+          parse(page?.content?.rendered)
+        ) : (
+          <>
+            <PageHero
+              breadcrumbs={breadcrumbs}
+              title={page?.title?.rendered}
+              background_image={page?.acf?.hero_image}
+            />
+            <Section className='py-12'>
+              {page?.acf?.elements && (
+                <Content elements={page?.acf?.elements} />
+              )}
+            </Section>
+          </>
+        )}
 
         <Divider width={12} />
       </Layout>
@@ -80,6 +88,14 @@ export async function getStaticProps({ params }) {
   )
   const pageData = await pageRes.json()
   const page = pageData?.length > 0 ? pageData[0] : null
+
+  console.log()
+
+  const vc = page?.acf?.enable_visual_composer
+    ? page.acf.enable_visual_composer
+    : false
+
+  //console.log(vc)
 
   if (!page) {
     return {
@@ -102,6 +118,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       page,
+      vc,
       parentPage,
     },
     revalidate: 10,
